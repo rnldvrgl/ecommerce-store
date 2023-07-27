@@ -1,4 +1,5 @@
 import Container from "@/components/ui/container";
+import MainNav from "@/components/main-nav";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -9,6 +10,7 @@ const Navbar = () => {
                     <Link href="/" className="flex ml-4 lg:ml-0 gap-x-2">
                         <p className="text-xl font-bold">STORE</p>
                     </Link>
+                    <MainNav />
                 </div>
             </Container>
         </div>
