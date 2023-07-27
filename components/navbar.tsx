@@ -10,7 +10,7 @@ const Navbar = () => {
                     <Link href="/" className="flex ml-4 lg:ml-0 gap-x-2">
                         <p className="text-xl font-bold">STORE</p>
                     </Link>
-                    <MainNav />
+                    <MainNav data={[]} />
                 </div>
             </Container>
         </div>
