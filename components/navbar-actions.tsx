@@ -1,7 +1,13 @@
+"use client"
+
+import Button from "@/components/ui/Button"
+
 const NavbarActions = () => {
     return (
         <div className="flex items-center ml-auto gap-x-4">
-            Hello
+            <Button>
+
+            </Button>
         </div>
     );
 }
