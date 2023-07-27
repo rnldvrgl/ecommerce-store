@@ -3,6 +3,8 @@ import MainNav from "@/components/main-nav";
 import Link from "next/link";
 import getCategories from "@/actions/get-categories";
 
+export const revalidate = 0;
+
 const Navbar = async () => {
     const categories = await getCategories();
     return (
