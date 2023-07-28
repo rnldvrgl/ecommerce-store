@@ -20,6 +20,11 @@ const ProductCard: React.FC<ProductCard> = ({
                     alt="image"
                     className="object-cover rounded-md aspect-square"
                 />
+                <div className="opacity-0 group-hover:opacity-100">
+                    <div className="flex justify-center gap-x-6">
+                        <IconButton />
+                    </div>
+                </div>
             </div>
         </div>
     );
