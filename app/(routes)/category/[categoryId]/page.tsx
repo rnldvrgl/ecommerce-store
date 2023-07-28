@@ -8,9 +8,10 @@ import getProducts from "@/actions/get-products";
 import getCategory from '@/actions/get-category';
 import getSizes from '@/actions/get-sizes';
 import getColors from '@/actions/get-colors';
+import Billboard from '@/components/billboard';
 
-// import Filter from './components/filter';
-// import MobileFilters from './components/mobile-filters';
+import Filter from './components/filter';
+import MobileFilters from './components/mobile-filters';
 
 export const revalidate = 0;
 
@@ -40,12 +41,12 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
     return (
         <div className="bg-white">
             <Container>
-                {/* <Billboard
+                <Billboard
                     data={category.billboard}
-                /> */}
+                />
                 <div className="px-4 pb-24 sm:px-6 lg:px-8">
                     <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-                        {/* <MobileFilters sizes={sizes} colors={colors} />
+                        <MobileFilters sizes={sizes} colors={colors} />
                         <div className="hidden lg:block">
                             <Filter
                                 valueKey="sizeId"
@@ -57,7 +58,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
                                 name="Colors"
                                 data={colors}
                             />
-                        </div> */}
+                        </div>
                         <div className="mt-6 lg:col-span-4 lg:mt-0">
                             {products.length === 0 && <NoResults />}
                             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
