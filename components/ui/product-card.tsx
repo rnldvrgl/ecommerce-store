@@ -3,6 +3,7 @@
 import { Product } from "@/types";
 import Image from "next/image";
 import IconButton from "@/components/ui/icon-button";
+import { Expand, ShoppingCart } from "lucide-react";
 
 interface ProductCard {
     data: Product;
@@ -21,9 +22,18 @@ const ProductCard: React.FC<ProductCard> = ({
                     alt="image"
                     className="object-cover rounded-md aspect-square"
                 />
-                <div className="opacity-0 group-hover:opacity-100">
+                <div className="absolute w-full px-6 transition opacity-0 group-hover:opacity-100 bottom-5">
                     <div className="flex justify-center gap-x-6">
-                        <IconButton />
+                        <IconButton
+                            onClick={() => { }}
+                            icon={<Expand size={20} />}
+                            className="text-gray-600"
+                        />
+                        <IconButton
+                            onClick={() => { }}
+                            icon={<ShoppingCart size={20} />}
+                            className="text-gray-600"
+                        />
                     </div>
                 </div>
             </div>
