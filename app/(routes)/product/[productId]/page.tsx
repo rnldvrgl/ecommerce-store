@@ -1,7 +1,17 @@
-const ProductPage = () => {
+interface ProductPageProps {
+    params: {
+        productId: string;
+
+    }
+}
+
+
+const ProductPage: React.FC<ProductPageProps> = ({
+    params
+}) => {
     return (
         <div>
-            Individual
+            {params.productId}
         </div>
     );
 }
