@@ -1,17 +1,18 @@
-"use client"
+"use client";
 
+import NextImage from "next/image";
 import { Tab } from "@headlessui/react";
-import Image from "next/image";
 
-import { Image as ImageType } from "@/types"
+import { Image } from "@/types";
+
 import GalleryTab from "./gallery-tab";
 
 interface GalleryProps {
-    images: ImageType[]
+    images: Image[];
 }
 
 const Gallery: React.FC<GalleryProps> = ({
-    images
+    images = []
 }) => {
     return (
         <Tab.Group as="div" className="flex flex-col-reverse">
@@ -22,6 +23,20 @@ const Gallery: React.FC<GalleryProps> = ({
                     ))}
                 </Tab.List>
             </div>
+            <Tab.Panels className="w-full aspect-square">
+                {images.map((image) => (
+                    <Tab.Panel key={image.id}>
+                        <div className="relative w-full h-full overflow-hidden aspect-square sm:rounded-lg">
+                            <NextImage
+                                fill
+                                src={image.url}
+                                alt="Image"
+                                className="object-cover object-center"
+                            />
+                        </div>
+                    </Tab.Panel>
+                ))}
+            </Tab.Panels>
         </Tab.Group>
     );
 }
