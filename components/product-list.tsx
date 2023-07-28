@@ -16,8 +16,12 @@ const ProductList: React.FC<ProductListProps> = ({
             {items.length === 0 && (
                 <NoResults />
             )}
-            <div>
-
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {items.map((item) => (
+                    <div key={item.id}>
+                        {item.name}
+                    </div>
+                ))}
             </div>
         </div>
     );
